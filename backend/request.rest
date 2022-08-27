@@ -1,0 +1,209 @@
+//Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Cheria",
+    "email": "cheria@gmail.com",
+    "password": "12345",
+    "confPassword": "12345",
+    "role": "user",
+    "dptId":2
+} 
+
+###
+//get All User
+GET http://localhost:5000/users
+
+
+###
+//get single User
+GET http://localhost:5000/users/dc489ed8-0f6e-4c9e-97a9-3bd2936229ab
+
+###
+//update user
+PATCH  http://localhost:5000/users/dc489ed8-0f6e-4c9e-97a9-3bd2936229ab
+Content-Type: application/json
+
+{
+    "name":"jhon Doe Updated oke",
+    "email": "jhon@gmail.update",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+} 
+
+###
+//update user
+DELETE http://localhost:5000/users/ec590ec6-1d40-4137-9037-bdcffa3e8532
+
+
+###
+# User Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "cheri@gmail.com",
+    "password": "12345"
+} 
+
+###
+# Admin Login 
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "cang@gmail.com",
+    "password": "12345"
+}
+
+###
+# Ambil USer Login
+GET http://localhost:5000/me
+
+
+###
+# LogOut
+DELETE http://localhost:5000/logout
+
+
+
+
+###########################################################
+###
+//get All Products
+GET http://localhost:5000/products
+
+###
+//get Single Products
+GET http://localhost:5000/products/3f959eef-f956-43e1-b01d-01b9a920d3ca
+
+###
+//Post Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name":"Product 18",
+    "price":2000
+} 
+
+
+###
+//Update Data Product
+PATCH  http://localhost:5000/products/3a4bc080-8af2-4f47-84e5-6e04407672e4
+Content-Type: application/json
+
+{
+    "name":"Product 6",
+    "price":3500
+} 
+
+
+###
+//Delet data product
+DELETE   http://localhost:5000/products/e5fe14dd-0d8c-46a7-92b8-dc5d319e2248
+
+
+###
+//get All DPT
+GET http://localhost:5000/dpt
+
+
+###
+//get Single Dpt
+GET http://localhost:5000/dpt/kfjahkdj873492-ogihsoiuu2934-i8hkjhfdkg-4i2hgjhdb
+
+
+###
+//Post Data Dpt
+POST http://localhost:5000/dpt
+Content-Type: application/json
+
+{
+    "name":"test 4",
+    "initial":"test"
+} 
+
+
+###
+//Update Data Dpt
+PATCH  http://localhost:5000/dpt/kfjahkdj873492-ogihsoiuu2934-i8hkjhfdkg-4i2hgjhdb
+Content-Type: application/json
+
+{
+    "name":"Production",
+    "initial":"PRO"
+} 
+
+
+###
+//Delet data Dpt
+DELETE   http://localhost:5000/dpt/0d4d0966-03bb-41dc-adae-f192d8263af
+
+
+
+###########################################################
+###
+//get All Temuan
+GET http://localhost:5000/temuan
+
+###
+//get Single Temuan
+GET http://localhost:5000/temuan/3f93065b-8a0b-41fb-a851-94b8bac502d3
+
+
+###
+//Post Data Temuan
+POST http://localhost:5000/temuan
+Content-Type: application/json
+
+{
+    "noTemuan":"PRO/12/14/12/13",
+    "sourceId":1,
+    "ringkasan":"Ringakasan", 
+    "klasifikasi":"Kualifikasi", 
+    "persyaratan":"Persyaratan", 
+    "gapAnalysis":"Gap Analysis", 
+    "rootId":"Root Id",
+    "perbaikan":"Perbaikan", 
+    "pencegahan":"Pencegahan", 
+    "date":"2022-08-17 16:05:39", 
+    "bukti":"Bukti", 
+    "status":"Status"
+} 
+
+###
+//Update Data Temuan
+PATCH  http://localhost:5000/temuan/3f93065b-8a0b-41fb-a851-94b8bac502d3
+Content-Type: application/json
+
+{
+    "noTemuan":"PRO/12/14/12/11",
+    "sourceId":1,
+    "ringkasan":"Ringakasan Updated", 
+    "klasifikasi":"Kualifikasi", 
+    "persyaratan":"Persyaratan", 
+    "gapAnalysis":"Gap Analysis", 
+    "rootId":"Root Id",
+    "perbaikan":"Perbaikan", 
+    "pencegahan":"Pencegahan", 
+    "date":"2022-08-17 16:05:39", 
+    "bukti":"Bukti", 
+    "status":"Status"
+} 
+
+
+###
+//Delet data Temuan
+DELETE   http://localhost:5000/temuan/b95cccb8-6e08-457e-9771-076f8e4379d0
+
+###
+//Update Status Data Temuan
+PATCH  http://localhost:5000/temuan/3f93065b-8a0b-41fb-a851-94b8bac502d3
+Content-Type: application/json
+
+{
+    "status":"Overdue"
+} 
